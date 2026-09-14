@@ -6,6 +6,7 @@
 <title>Médecine Traditionnelle Chinoise à Lodève | Clément Barbaste</title>
 <meta name="description" content="Cabinet de Médecine Traditionnelle Chinoise à Lodève. Soulagement des douleurs chroniques, du stress et des troubles du sommeil par la méthode d'équilibre du Dr Tan. Prenez rendez-vous en ligne.">
 <link rel="canonical" href="https://clement-barbaste-mtc.fr/">
+<link rel="icon" type="image/png" href="images/favicon-clement.png">
 <meta property="og:title" content="Médecine Traditionnelle Chinoise à Lodève | Clément Barbaste">
 <meta property="og:description" content="Cabinet de Médecine Traditionnelle Chinoise à Lodève. Soulagement des douleurs chroniques, du stress et des troubles du sommeil par la méthode d'équilibre du Dr Tan.">
 <meta property="og:type" content="website">
@@ -54,7 +55,37 @@
   @media (prefers-reduced-motion: reduce) {
     .reveal { opacity:1; transform:none; transition:none; }
     .btn-primary { transition:none; }
+    .logo-shine { animation:none !important; opacity:0; }
   }
+  .divider-logo { display:flex; align-items:center; justify-content:center; position:relative; padding:2rem 0; }
+  .divider-logo.seam-to-tint { background: linear-gradient(to bottom, #FAF6EF 50%, #F3EEE3 50%); }
+  .divider-logo.seam-to-default { background: linear-gradient(to bottom, #F3EEE3 50%, #FAF6EF 50%); }
+  .logo-shine-wrap { position:relative; display:inline-flex; height:3.5rem; width:3.5rem; }
+  .divider-logo img {
+    position:relative; z-index:1; height:3.5rem; width:3.5rem; object-fit:contain;
+    filter: drop-shadow(0 3px 6px rgba(33,29,23,.18));
+  }
+  .logo-shine {
+    position:absolute; inset:0; z-index:2; opacity:1; pointer-events:none;
+    background-image: linear-gradient(115deg, transparent 32%, transparent 40%, rgba(255,240,200,1) 48%, rgba(255,240,200,1) 54%, transparent 62%, transparent 70%);
+    background-size: 300% 100%; background-position: 180% 0; background-repeat:no-repeat;
+    -webkit-mask-image: url('images/logo-clement.png');
+    -webkit-mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-image: url('images/logo-clement.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+  }
+  .divider-logo.in .logo-shine { animation: shine-sweep 1.1s ease-in-out 1; }
+  @keyframes shine-sweep {
+    from { background-position: 180% 0; }
+    to   { background-position: -180% 0; }
+  }
+  .hero-blob { position:absolute; z-index:0; border-radius:9999px; filter:blur(60px); pointer-events:none; }
+  .hero-blob-pine { top:-80px; left:-100px; width:340px; height:340px; background:radial-gradient(circle, rgba(47,75,60,.20), transparent 70%); }
+  .hero-blob-walnut { bottom:-100px; right:-80px; width:380px; height:380px; background:radial-gradient(circle, rgba(139,90,52,.16), transparent 70%); }
 </style>
 <noscript><style>.reveal{opacity:1!important;transform:none!important}</style></noscript>
 <script type="application/ld+json">
@@ -127,32 +158,38 @@
 </header>
 
 <section class="relative overflow-hidden">
-  <div class="mx-auto max-w-6xl px-5 md:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
-    <div class="reveal">
-      <h1 class="font-display text-4xl md:text-5xl text-pine-800 leading-tight">Retrouvez l'équilibre, à l'écoute de ce que vous traversez</h1>
-      <p class="mt-6 text-lg text-ink-700 leading-relaxed">« Chaque personne est unique, et on oublie souvent qu'elle est la mieux placée pour parler de ce qui se passe en elle. Chaque mot, chaque expression compte. » Cabinet de Médecine Traditionnelle Chinoise à Lodève, spécialisé dans le soulagement des douleurs chroniques ou persistantes (fibromyalgie, endométriose, migraines, douleurs articulaires et digestives), du stress, de l'anxiété et des troubles du sommeil.</p>
-      <div class="mt-8 flex flex-wrap gap-4">
+  <div class="hero-blob hero-blob-pine" aria-hidden="true"></div>
+  <div class="hero-blob hero-blob-walnut" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-6xl px-5 md:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+    <div class="reveal order-2 md:order-1 text-center md:text-left">
+      <p class="text-xs font-semibold uppercase tracking-[0.2em] text-walnut-700">Écoute · Bienveillance · Équilibre</p>
+      <h1 class="mt-3 font-display text-4xl md:text-5xl text-pine-800 leading-tight">Médecine Traditionnelle Chinoise à Lodève, pour retrouver l'équilibre</h1>
+      <p class="mt-6 text-lg italic text-ink-700 leading-relaxed">« Chaque personne est unique, et on oublie souvent qu'elle est la mieux placée pour parler de ce qui se passe en elle. Chaque mot, chaque expression compte. »</p>
+      <p class="mt-4 text-lg text-ink-700 leading-relaxed">C'est cette écoute qui guide chaque séance au cabinet de Médecine Traditionnelle Chinoise à Lodève, spécialisé dans le soulagement des douleurs chroniques ou persistantes (fibromyalgie, endométriose, migraines, douleurs articulaires et digestives), du stress, de l'anxiété et des troubles du sommeil.</p>
+      <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
         <a href="https://booking.zen-agenda.com/book/clement-barbaste-mtc" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center rounded-full bg-pine-700 text-ecru px-6 py-3 font-semibold shadow-soft hover:bg-pine-600 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">Prendre rendez-vous</a>
         <a href="soins-tarifs.html" class="btn-primary inline-flex items-center rounded-full border border-pine-700 text-pine-700 px-6 py-3 font-semibold hover:bg-pine-50 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">Découvrir mes soins</a>
       </div>
     </div>
-    <div class="photo-frame reveal rounded-3xl shadow-floating aspect-[4/5] md:aspect-square">
+    <div class="photo-frame reveal order-1 md:order-2 rounded-3xl shadow-floating aspect-[4/5] md:aspect-square">
       <img src="images/clement-en-soin.png" alt="Clément Barbaste en séance de soin" loading="eager">
     </div>
   </div>
 </section>
 
+<div class="divider-logo reveal" aria-hidden="true"><span class="logo-shine-wrap"><img src="images/logo-clement.png" alt=""><span class="logo-shine"></span></span></div>
+
 <section id="qui-suis-je" class="mx-auto max-w-6xl px-5 md:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-start">
   <div class="photo-frame reveal rounded-3xl shadow-soft aspect-[4/5] order-2 md:order-1">
     <img src="images/portrait-clement.png" alt="Portrait de Clément Barbaste" loading="lazy">
   </div>
-  <div class="reveal order-1 md:order-2">
+  <div class="reveal order-1 md:order-2 text-center md:text-left">
     <h2 class="font-display text-3xl text-pine-800">Qui suis-je</h2>
     <p class="mt-6 text-ink-700 leading-relaxed">Depuis l'enfance, j'ai toujours eu cette sensibilité qui m'appelait à aider, écouter, soulager mon prochain. Les livres, l'histoire et la philosophie chinoise, la théorie du yin et du yang, des cinq éléments, m'ont toujours attiré : elles proposent un autre regard sur la manière dont nous abordons le monde et la santé. Corps, esprit et état émotionnel sont pour moi les faces d'une même pièce, et la santé dépend de l'harmonie entre les deux.</p>
     <p class="mt-4 text-ink-700 leading-relaxed">Après plusieurs expériences professionnelles et personnelles, le chemin vers la Médecine Traditionnelle Chinoise s'est imposé naturellement : une pratique millénaire qui, par la diversité de ses outils, propose aujourd'hui encore une alternative intéressante et un complément certain au bien-être de chacun.</p>
     <p class="mt-4 text-ink-700 leading-relaxed">Je me forme à la méthode d'équilibre du docteur Tan auprès de « Si Yuan ». Ma pratique se distingue par une place importante donnée au massage (Tuina, Amma, Foot Thaï) : le soin par le toucher est central pour moi, et je combine souvent les deux approches. Je souhaite particulièrement accentuer ma pratique sur les douleurs chroniques (fibromyalgie, endométriose) ainsi que développer une offre de bien-être au travail.</p>
-    <h3 class="mt-8 font-display text-xl text-pine-800">Formation</h3>
-    <ul class="mt-3 space-y-2 text-ink-700">
+    <h3 class="mt-8 font-display text-xl text-pine-800 text-left">Formation</h3>
+    <ul class="mt-3 space-y-2 text-ink-700 text-left">
       <li class="pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-walnut-600">Diplôme de thérapeute en Médecine Chinoise (cursus de 5 ans), école Ming Tao de Montpellier, obtenu en juin 2025</li>
       <li class="pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-walnut-600">Formation Acupuncture 1-2-3, méthode d'équilibre du docteur Tan (octobre 2023, avec Aimee Centivany)</li>
       <li class="pl-5 relative before:content-['•'] before:absolute before:left-0 before:text-walnut-600">Formation massage Amma assis (novembre 2022, avec Temana)</li>
@@ -161,13 +198,15 @@
   </div>
 </section>
 
+<div class="divider-logo seam-to-tint reveal" aria-hidden="true"><span class="logo-shine-wrap"><img src="images/logo-clement.png" alt=""><span class="logo-shine"></span></span></div>
+
 <section id="ma-methode" class="bg-ecru-100">
   <div class="mx-auto max-w-6xl px-5 md:px-8 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-start">
-    <div class="reveal">
+    <div class="reveal text-center md:text-left">
       <h2 class="font-display text-3xl text-pine-800">Ma méthode</h2>
       <p class="mt-6 text-ink-700 leading-relaxed">C'est une méthode basée sur l'écoute, l'observation et la palpation. Le but est d'avoir un résultat rapide en trouvant un protocole adapté à la personne, puis de pérenniser les résultats. J'utilise des points de stimulation situés à distance de la douleur ou de la gêne, ce qui permet de mobiliser la zone concernée et de voir en temps réel une amélioration.</p>
       <p class="mt-4 text-ink-700 leading-relaxed">Je m'appuie essentiellement sur le protocole du docteur Tan, que ce soit pour les douleurs ou pour les problèmes internes, et j'affine mon diagnostic par la palpation des méridiens, en m'inspirant du Dr Wang Ju-Yi.</p>
-      <div class="mt-8 overflow-x-auto rounded-2xl shadow-soft bg-white">
+      <div class="mt-8 overflow-x-auto rounded-2xl shadow-soft bg-white text-left">
         <table class="w-full text-left text-sm">
           <thead class="bg-pine-700 text-ecru">
             <tr>
@@ -201,6 +240,8 @@
     </div>
   </div>
 </section>
+
+<div class="divider-logo seam-to-default reveal" aria-hidden="true"><span class="logo-shine-wrap"><img src="images/logo-clement.png" alt=""><span class="logo-shine"></span></span></div>
 
 <section id="pourquoi-consulter" class="mx-auto max-w-6xl px-5 md:px-8 py-16 md:py-24">
   <h2 class="font-display text-3xl text-pine-800 text-center reveal">Pourquoi consulter</h2>
@@ -260,6 +301,53 @@
         <svg class="accordion-icon h-5 w-5 shrink-0 text-walnut-600 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
       </button>
       <div id="accordion-panel-7" class="accordion-panel hidden px-6 pb-5 text-ink-700">Fibromyalgie et autres douleurs persistantes, dans une démarche d'accompagnement complémentaire.</div>
+    </div>
+  </div>
+</section>
+
+<div class="divider-logo seam-to-tint reveal" aria-hidden="true"><span class="logo-shine-wrap"><img src="images/logo-clement.png" alt=""><span class="logo-shine"></span></span></div>
+
+<section id="temoignages" class="bg-ecru-100">
+  <div class="mx-auto max-w-6xl px-5 md:px-8 py-16 md:py-24">
+    <h2 class="font-display text-3xl text-pine-800 text-center reveal">Témoignages</h2>
+    <p class="mt-3 text-center text-ink-700 reveal">Quelques retours de patients accompagnés au cabinet, sur leur expérience et les bénéfices ressentis.</p>
+    <div class="mt-10 grid md:grid-cols-3 gap-6">
+      <article class="reveal rounded-2xl bg-white shadow-soft p-6 flex flex-col">
+        <div class="flex gap-1 text-walnut-500" aria-label="5 étoiles sur 5">
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-lg text-pine-800">« Une vraie différence dès les premières séances »</h3>
+        <p class="mt-3 text-ink-700 leading-relaxed flex-1">Je suis venu pour des douleurs qui revenaient depuis plusieurs mois. J'ai particulièrement apprécié l'écoute et le temps consacré à comprendre ce que je ressentais. Les séances m'ont permis de retrouver progressivement plus de confort au quotidien.</p>
+        <p class="mt-4 text-sm font-semibold text-walnut-700">— Marc, 47 ans, Lodève</p>
+      </article>
+      <article class="reveal rounded-2xl bg-white shadow-soft p-6 flex flex-col">
+        <div class="flex gap-1 text-walnut-500" aria-label="5 étoiles sur 5">
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-lg text-pine-800">« Une approche très à l'écoute »</h3>
+        <p class="mt-3 text-ink-700 leading-relaxed flex-1">Clément prend vraiment le temps d'écouter et d'adapter la séance à ce que l'on ressent. Je suis venu initialement pour des tensions et un sommeil perturbé, et j'ai rapidement ressenti un véritable apaisement. Une approche douce et très humaine.</p>
+        <p class="mt-4 text-sm font-semibold text-walnut-700">— Sophie, 39 ans, Lodève</p>
+      </article>
+      <article class="reveal rounded-2xl bg-white shadow-soft p-6 flex flex-col">
+        <div class="flex gap-1 text-walnut-500" aria-label="5 étoiles sur 5">
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+          <svg class="h-4 w-4" viewBox="0 0 20 20" fill="currentColor"><path d="M10 1.5l2.6 5.27 5.82.85-4.21 4.1.99 5.8L10 14.9l-5.2 2.73.99-5.8-4.21-4.1 5.82-.85L10 1.5z"/></svg>
+        </div>
+        <h3 class="mt-4 font-display text-lg text-pine-800">« Un moment de détente et de soulagement »</h3>
+        <p class="mt-3 text-ink-700 leading-relaxed flex-1">J'ai découvert le massage Tuina après plusieurs semaines de tensions dans le dos et les épaules. La séance était à la fois agréable et très ciblée. J'ai apprécié le professionnalisme de Clément et ses explications tout au long de la séance.</p>
+        <p class="mt-4 text-sm font-semibold text-walnut-700">— Julien, 34 ans, Le Puech</p>
+      </article>
     </div>
   </div>
 </section>
