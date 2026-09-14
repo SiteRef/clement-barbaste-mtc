@@ -188,7 +188,7 @@ alignement, rayons de bordure, ombres, dimensionnement des images.
 ## 11. Points à compléter avant mise en ligne (checklist livraison)
 
 - [ ] SIRET + statut juridique (pages légales)
-- [ ] Hébergeur (pages légales)
+- [x] Hébergeur (pages légales) — confirmé : Vercel
 - [x] ID de formulaire Formspree réel — configuré (`meaqyjwo`)
 - [ ] Horaires d'ouverture
 - [x] Liens Facebook / Instagram — confirmés et intégrés (footer + JSON-LD `sameAs`)
