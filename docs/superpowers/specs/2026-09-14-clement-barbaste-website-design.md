@@ -191,7 +191,7 @@ alignement, rayons de bordure, ombres, dimensionnement des images.
 - [ ] Hébergeur (pages légales)
 - [ ] ID de formulaire Formspree réel
 - [ ] Horaires d'ouverture
-- [ ] Liens Facebook / Instagram
+- [x] Liens Facebook / Instagram — confirmés et intégrés (footer + JSON-LD `sameAs`)
 - [ ] Réponses FAQ (puis ajout section + schema `FAQPage`)
 - [ ] Avis clients réels sur la fiche GMB (avant d'envisager `AggregateRating`)
 - [ ] Formulaire de première visite (PDF téléchargeable) — mentionné dans le
