@@ -12,7 +12,13 @@
 ## ⚠️ Champs encore manquants (à relancer)
 - Horaires d'ouverture du cabinet
 - FAQ (Clément a dit vouloir compléter rapidement)
-- Photos réelles (cabinet + portrait) — dossier Drive fourni, en attendant : placeholders temporaires
+- Liens Facebook/Instagram
+- SIRET, statut juridique, hébergeur (pages légales)
+- ID de formulaire Formspree réel
+
+*Résolu depuis la rédaction de ce document : téléphone confirmé (06 75 15 56 27),
+photos réelles reçues (dossier /images/), fiche GMB créée et en ligne (embed dans
+/gmb/).*
 
 ---
 
@@ -159,7 +165,9 @@ Bouton Zen Agenda
 
 ## SEO / GEO / Schema — spécifications techniques
 
-*Section à donner telle quelle à Claude Code pour le build. Téléphone à compléter dès que Clément le communique (actuellement absent du questionnaire).*
+*Section à donner telle quelle à Claude Code pour le build.*
+
+**Téléphone confirmé par le client (communiqué le 2026-09-14, hors questionnaire écrit) : 06 75 15 56 27**
 
 ### Balises par page
 
@@ -195,7 +203,7 @@ Bouton Zen Agenda
 - Email : clementbarbaste.mtc@gmail.com
 - Prestations : 1ère séance MTC, séance de suivi, massage Amma assis, massage Tuina, massage Foot Thaï
 
-Données manquantes à obtenir avant implémentation complète : téléphone, horaires d'ouverture, liens Facebook/Instagram, nom de domaine définitif (donc URL/images).
+Données manquantes à obtenir avant implémentation complète : horaires d'ouverture, liens Facebook/Instagram (téléphone et nom de domaine confirmés, cf. plus haut).
 
 **FAQPage** (page Accueil, section FAQ) — à implémenter une fois les réponses de Clément reçues, sur la base des questions/réponses réelles fournies (pas de contenu à inventer d'ici là).
 
