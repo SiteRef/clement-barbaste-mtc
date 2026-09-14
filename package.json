@@ -1,0 +1,7 @@
+{
+  "name": "clement-barbaste-mtc",
+  "private": true,
+  "type": "module",
+  "scripts": { "serve": "node serve.mjs", "shot": "node screenshot.mjs" },
+  "dependencies": { "puppeteer": "^24.0.0" }
+}
