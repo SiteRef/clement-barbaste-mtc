@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://clement-barbaste-mtc.fr/contact.html</loc>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://clement-barbaste-mtc.fr/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://clement-barbaste-mtc.fr/mentions-legales.html</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://clement-barbaste-mtc.fr/politique-confidentialite.html</loc>
+    <priority>0.2</priority>
+  </url>
+  <url>
+    <loc>https://clement-barbaste-mtc.fr/soins-tarifs.html</loc>
+    <priority>0.9</priority>
+  </url>
+</urlset>
