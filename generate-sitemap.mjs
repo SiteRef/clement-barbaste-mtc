@@ -1,4 +1,8 @@
 import { readdirSync, writeFileSync } from "fs";
+import { fileURLToPath } from "url";
+import { dirname, join } from "path";
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 const DOMAIN = "https://clement-barbaste-mtc.fr";
 
@@ -10,7 +14,7 @@ const PRIORITIES = {
   "politique-confidentialite.html": 0.2,
 };
 
-const files = readdirSync(process.cwd())
+const files = readdirSync(__dirname)
   .filter((f) => f.endsWith(".html"))
   .sort();
 
@@ -24,5 +28,5 @@ const urls = files
 
 const xml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>\n`;
 
-writeFileSync("sitemap.xml", xml);
+writeFileSync(join(__dirname, "sitemap.xml"), xml);
 console.log(`sitemap.xml written with ${files.length} URLs`);
