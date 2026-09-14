@@ -13,11 +13,11 @@
 - Horaires d'ouverture du cabinet
 - FAQ (Clément a dit vouloir compléter rapidement)
 - SIRET, statut juridique, hébergeur (pages légales)
-- ID de formulaire Formspree réel
 
 *Résolu depuis la rédaction de ce document : téléphone confirmé (06 75 15 56 27),
 photos réelles reçues (dossier /images/), fiche GMB créée et en ligne (embed dans
-/gmb/), liens Facebook/Instagram confirmés et intégrés (footer + schema).*
+/gmb/), liens Facebook/Instagram confirmés et intégrés (footer + schema), formulaire
+de contact connecté à Formspree (meaqyjwo).*
 
 ---
 

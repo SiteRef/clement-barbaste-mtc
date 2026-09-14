@@ -189,7 +189,7 @@ alignement, rayons de bordure, ombres, dimensionnement des images.
 
 - [ ] SIRET + statut juridique (pages légales)
 - [ ] Hébergeur (pages légales)
-- [ ] ID de formulaire Formspree réel
+- [x] ID de formulaire Formspree réel — configuré (`meaqyjwo`)
 - [ ] Horaires d'ouverture
 - [x] Liens Facebook / Instagram — confirmés et intégrés (footer + JSON-LD `sameAs`)
 - [ ] Réponses FAQ (puis ajout section + schema `FAQPage`)
