@@ -144,25 +144,28 @@
       <a href="https://booking.zen-agenda.com/book/clement-barbaste-mtc" target="_blank" rel="noopener noreferrer" class="btn-primary inline-flex items-center justify-center rounded-full border border-pine-700 text-pine-700 px-6 py-3 font-semibold hover:bg-pine-50 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">Prendre rendez-vous en ligne</a>
     </div>
 
-    <form action="https://formspree.io/f/meaqyjwo" method="POST" class="mt-10 space-y-4 text-left">
-      <div>
-        <label for="name" class="block text-sm font-semibold text-pine-800">Nom</label>
-        <input id="name" name="name" type="text" required class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">
-      </div>
-      <div>
-        <label for="email" class="block text-sm font-semibold text-pine-800">Email</label>
-        <input id="email" name="email" type="email" required class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">
-      </div>
-      <div>
-        <label for="phone" class="block text-sm font-semibold text-pine-800">Téléphone</label>
-        <input id="phone" name="phone" type="tel" class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">
-      </div>
-      <div>
-        <label for="message" class="block text-sm font-semibold text-pine-800">Message</label>
-        <textarea id="message" name="message" rows="4" required class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300"></textarea>
-      </div>
-      <button type="submit" class="btn-primary inline-flex items-center rounded-full bg-pine-700 text-ecru px-6 py-3 font-semibold shadow-soft hover:bg-pine-600 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">Envoyer</button>
-    </form>
+    <div class="mt-10">
+      <form id="contact-form" action="https://formspree.io/f/meaqyjwo" method="POST" class="space-y-4 text-left">
+        <div>
+          <label for="name" class="block text-sm font-semibold text-pine-800">Nom</label>
+          <input id="name" name="name" type="text" required class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-semibold text-pine-800">Email</label>
+          <input id="email" name="email" type="email" required class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">
+        </div>
+        <div>
+          <label for="phone" class="block text-sm font-semibold text-pine-800">Téléphone</label>
+          <input id="phone" name="phone" type="tel" class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300">
+        </div>
+        <div>
+          <label for="message" class="block text-sm font-semibold text-pine-800">Message</label>
+          <textarea id="message" name="message" rows="4" required class="mt-1 w-full rounded-xl border border-ecru-200 bg-white px-4 py-2.5 text-ink focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300"></textarea>
+        </div>
+        <button type="submit" class="btn-primary inline-flex items-center rounded-full bg-pine-700 text-ecru px-6 py-3 font-semibold shadow-soft hover:bg-pine-600 focus-visible:outline focus-visible:outline-[3px] focus-visible:outline-pine-300 disabled:opacity-60">Envoyer</button>
+      </form>
+      <p id="contact-form-status" class="hidden mt-4 font-semibold" role="status" aria-live="polite"></p>
+    </div>
   </div>
 
   <div class="reveal space-y-6 text-center md:text-left">
@@ -244,6 +247,35 @@
     entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('in'); });
   }, { threshold: 0.15 });
   document.querySelectorAll('.reveal').forEach((el) => revealObserver.observe(el));
+</script>
+<script>
+  const contactForm = document.getElementById('contact-form');
+  const contactStatus = document.getElementById('contact-form-status');
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const submitBtn = contactForm.querySelector('button[type="submit"]');
+    submitBtn.disabled = true;
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' },
+      });
+      if (response.ok) {
+        contactForm.hidden = true;
+        contactStatus.textContent = "Merci, votre message a bien été envoyé. Je vous répondrai rapidement.";
+        contactStatus.className = "mt-4 font-semibold text-pine-700";
+      } else {
+        contactStatus.textContent = "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de m'appeler directement.";
+        contactStatus.className = "mt-4 font-semibold text-walnut-800";
+        submitBtn.disabled = false;
+      }
+    } catch (err) {
+      contactStatus.textContent = "Une erreur est survenue lors de l'envoi. Merci de réessayer ou de m'appeler directement.";
+      contactStatus.className = "mt-4 font-semibold text-walnut-800";
+      submitBtn.disabled = false;
+    }
+  });
 </script>
 </body>
 </html>
