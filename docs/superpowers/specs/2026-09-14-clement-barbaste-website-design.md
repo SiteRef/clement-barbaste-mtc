@@ -144,7 +144,9 @@ Footer (toutes les pages) : liens légaux + crédit `sitereferencement.com`
 Balises `<title>`/meta exactement celles spécifiées dans
 `Structure_Site_Clement_Barbaste_MTC.md` §"Balises par page". Un seul bloc
 `@graph` JSON-LD par page dans le `<head>` :
-- `MedicalBusiness` sur toutes les pages — champs confirmés uniquement : nom,
+- `MedicalBusiness` sur les 3 pages de contenu (Accueil, Soins & Tarifs,
+  Contact) — les pages légales n'en ont pas besoin, meilleure pratique SEO.
+  Champs confirmés uniquement : nom,
   adresse, email, téléphone (06 75 15 56 27), prestations. Horaires/réseaux
   sociaux ajoutés dès qu'ils sont fournis.
 - `WebSite` — identité globale.
@@ -192,4 +194,11 @@ alignement, rayons de bordure, ombres, dimensionnement des images.
 - [ ] Liens Facebook / Instagram
 - [ ] Réponses FAQ (puis ajout section + schema `FAQPage`)
 - [ ] Avis clients réels sur la fiche GMB (avant d'envisager `AggregateRating`)
+- [ ] Formulaire de première visite (PDF téléchargeable) — mentionné dans le
+      texte de Soins & Tarifs mais pas encore créé/uploadé
+- [ ] Photos (portrait + cabinet) : confirmer avec le client qu'il s'agit bien
+      de vraies photos de Clément et du cabinet, pas de photos génériques —
+      le questionnaire d'origine dit "pas encore" pour les deux, à vérifier
+      avant mise en ligne puisque l'alt text et le schema JSON-LD affirment
+      une identité réelle
 - [ ] Vérification redirection www/non-www une fois le domaine en ligne
