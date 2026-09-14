@@ -19,7 +19,9 @@ const outPath = path.join(outDir, fileName);
 
 const browser = await puppeteer.launch({ headless: true });
 const page = await browser.newPage();
-await page.setViewport({ width: 1440, height: 900, deviceScaleFactor: 1 });
+const width = Number(process.env.SCREENSHOT_WIDTH) || 1440;
+const height = Number(process.env.SCREENSHOT_HEIGHT) || 900;
+await page.setViewport({ width, height, deviceScaleFactor: 1 });
 await page.goto(url, { waitUntil: "networkidle0", timeout: 30000 });
 
 // force all lazy images to load, then wait for them
