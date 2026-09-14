@@ -41,8 +41,11 @@ Sources de vérité :
   "à venir" affichée — ces blocs sont simplement omis du HTML tant que les
   données réelles ne sont pas fournies, pour ne pas donner une impression de
   site inachevé. Ajoutés dans une itération ultérieure.
-- **GMB :** dossier `/gmb/` vide à ce jour → aucun embed, aucun placeholder de
-  carte. Sera ajouté quand l'URL de la fiche sera fournie.
+- **GMB :** fiche désormais en ligne, embed iframe fourni dans `/gmb/`. Intégré
+  tel quel (src jamais modifié) sur la page Contact, avec un style cohérent
+  (coins arrondis, ombre du système de design). Aucun avis n'existe encore sur
+  la fiche → toujours pas de schema `AggregateRating`/`Review` tant que des
+  avis réels ne sont pas récoltés.
 
 ## 3. Arborescence des fichiers
 
@@ -126,7 +129,8 @@ retour vers Accueil (Qui suis-je / méthode) → CTA.
 Tap-to-call `tel:0675155627` + formulaire Formspree (endpoint placeholder
 signalé) + adresse/accès (9 place Alsace Lorraine, 34700 Lodève, parking du
 parc et de la sous-préfecture, cabinet au 1er étage) + photos extérieur/accès
-+ CTA Zen Agenda. Pas de carte GMB.
++ carte GMB embarquée (iframe fourni, src non modifié, style coins
+arrondis/ombre) + CTA Zen Agenda.
 
 ### 6.4 Pages légales
 `mentions-legales.html` et `politique-confidentialite.html` avec structure
@@ -187,5 +191,5 @@ alignement, rayons de bordure, ombres, dimensionnement des images.
 - [ ] Horaires d'ouverture
 - [ ] Liens Facebook / Instagram
 - [ ] Réponses FAQ (puis ajout section + schema `FAQPage`)
-- [ ] URL fiche GMB (puis ajout embed + éventuel `AggregateRating`)
+- [ ] Avis clients réels sur la fiche GMB (avant d'envisager `AggregateRating`)
 - [ ] Vérification redirection www/non-www une fois le domaine en ligne
